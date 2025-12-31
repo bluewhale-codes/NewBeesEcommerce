@@ -14,6 +14,7 @@ import ProductCard from './Products/ProductCard'
 import ProductPage from './Products/ProductListPage'
 import ProductListingPage from './Products/ProductListPage'
 import ShoppingCart from './Components/ShoppingCart'
+import DigitalAssistant from './PersonalAssistant/DigitalAssistant'
 const products = [
     {
       id: 1,
@@ -75,6 +76,7 @@ function App() {
         <Route path="/new" element={<NewProduct/>} />
         <Route path="/productList" element={<ProductListingPage products={products}/>} />
         <Route path="/cart" element={<ShoppingCart/>} />
+        <Route path="/assistant" element={<DigitalAssistant/>} />
       </Routes>
     </BrowserRouter>
     </>

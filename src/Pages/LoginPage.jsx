@@ -59,7 +59,7 @@ const LoginPage = () => {
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    dispatch(login({ username:loginEmail,password:loginPassword}));
+    dispatch(login({ email:loginEmail,password:loginPassword}));
     
   };
 

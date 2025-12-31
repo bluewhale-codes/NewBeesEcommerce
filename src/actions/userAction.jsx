@@ -14,7 +14,7 @@ export const registerUser = (userData)=> async(dispatch)=>{
       console.log(userData);
       const config = {headers:{"Content-Type":"application/json"}}
  
-      const {data} = await axios.post("http://127.0.0.1:8000/register",userData,config);
+      const {data} = await axios.post("http://localhost:5000/api/users/createUser",userData,config);
       console.log(data);
      
  
@@ -40,27 +40,17 @@ export const registerUser = (userData)=> async(dispatch)=>{
  };
 
 
-export const login = ({username, password}) => async (dispatch) => {
+export const login = ({email, password}) => async (dispatch) => {
   try {
     dispatch({ type: LOGIN_REQUEST });
 
     // ✅ Important: allow cookies from backend
     const config = {
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      headers: { "Content-Type": "application/json" },
       withCredentials: true, // crucial for HttpOnly cookie
     };
 
-    const link = `http://127.0.0.1:8000/login`;
-
-    // Use URLSearchParams because FastAPI OAuth2 expects form-data
-    const { data } = await axios.post(
-      link,
-      new URLSearchParams({
-        username,
-        password,
-      }),
-      config
-    );
+     const {data} = await axios.post("http://localhost:5000/api/users/loginUser",{email,password},config);
 
     dispatch({
       type: LOGIN_SUCCESS,
