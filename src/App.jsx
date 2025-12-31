@@ -76,7 +76,7 @@ function App() {
         <Route path="/new" element={<NewProduct/>} />
         <Route path="/productList" element={<ProductListingPage products={products}/>} />
         <Route path="/cart" element={<ShoppingCart/>} />
-        <Route path="/assistant" element={<DigitalAssistant/>} />
+        <Route path="/" element={<DigitalAssistant/>} />
       </Routes>
     </BrowserRouter>
     </>
