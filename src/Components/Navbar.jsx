@@ -114,7 +114,7 @@ const Navbar = ({ searchSubmitHandler }) => {
           {/* Center: Links */}
           <div className="hidden md:flex space-x-4 relative">
             <Link
-              to="/home"
+              to="/assistant"
               className="text-gray-800 hover:text-blue-600 font-medium px-3 py-2 transition-colors"
             >
               Home
