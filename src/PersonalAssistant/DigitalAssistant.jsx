@@ -259,7 +259,7 @@ const DigitalAssistant = () => {
     setTranscript(""); // Clear transcript after sending
 
     try {
-      const res = await fetch("http://localhost:3000/ask", {
+      const res = await fetch("https://backend-personal-digital-assistant.onrender.com/ask", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
