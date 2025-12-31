@@ -558,7 +558,7 @@ const DigitalAssistant = () => {
     
     try {
       // Log to server
-      await fetch("http://localhost:3000/log-client-tool", {
+      await fetch("https://backend-personal-digital-assistant.onrender.com/log-client-tool", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -881,7 +881,7 @@ const DigitalAssistant = () => {
     setTranscript("");
 
     try {
-      const res = await fetch("http://localhost:3000/ask", {
+      const res = await fetch("https://backend-personal-digital-assistant.onrender.com/ask", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
