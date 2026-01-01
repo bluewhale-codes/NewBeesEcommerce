@@ -15,6 +15,7 @@ import ProductPage from './Products/ProductListPage'
 import ProductListingPage from './Products/ProductListPage'
 import ShoppingCart from './Components/ShoppingCart'
 import DigitalAssistant from './PersonalAssistant/DigitalAssistant'
+import HomePage from './PersonalAssistant/HomePage'
 const products = [
     {
       id: 1,
@@ -76,7 +77,8 @@ function App() {
         <Route path="/new" element={<NewProduct/>} />
         <Route path="/productList" element={<ProductListingPage products={products}/>} />
         <Route path="/cart" element={<ShoppingCart/>} />
-        <Route path="/" element={<DigitalAssistant/>} />
+        <Route path="/Assistant" element={<DigitalAssistant/>} />
+        <Route path="/" element={<HomePage/>} />
       </Routes>
     </BrowserRouter>
     </>
