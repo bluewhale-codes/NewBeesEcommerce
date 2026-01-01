@@ -16,7 +16,7 @@ import ProductListingPage from './Products/ProductListPage'
 import ShoppingCart from './Components/ShoppingCart'
 import DigitalAssistant from './PersonalAssistant/DigitalAssistant'
 import HomePage from './PersonalAssistant/HomePage'
-import Chat from './PersonalAssistant/chat'
+import Mychat from './PersonalAssistant/Mychat'
 const products = [
     {
       id: 1,
@@ -80,7 +80,7 @@ function App() {
         <Route path="/cart" element={<ShoppingCart/>} />
         <Route path="/Assistant" element={<DigitalAssistant/>} />
         <Route path="/" element={<HomePage/>} />,
-        <Route path="/chat" element={<Chat/>} />
+        <Route path="/chat" element={<Mychat/>} />
       </Routes>
     </BrowserRouter>
     </>

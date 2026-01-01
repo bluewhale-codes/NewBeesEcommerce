@@ -1,7 +1,8 @@
+import React from 'react'
 import { useState } from "react";
 
-export default function Chat() {
-  const [query, setQuery] = useState("");
+const Mychat = () => {
+     const [query, setQuery] = useState("");
   const [answer, setAnswer] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -56,8 +57,6 @@ export default function Chat() {
 
   setLoading(false);
 };
-
-
   return (
     <div className="chat-container">
       <h2>Personal Digital Assistant</h2>
@@ -83,5 +82,7 @@ export default function Chat() {
         </button>
       </div>
     </div>
-  );
+  )
 }
+
+export default Mychat
