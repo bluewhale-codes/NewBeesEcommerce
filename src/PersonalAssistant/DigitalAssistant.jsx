@@ -148,7 +148,7 @@ const DigitalAssistant = () => {
     }
 
     try {
-      await fetch("https://backend-personal-digital-assistant.onrender.com/log-client-tool", {
+      await fetch("http://localhost:3000/log-client-tool", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -600,7 +600,7 @@ const resumeSpeaking = () => {
         localStorage.setItem("ai_session_id", sessionId);
       }
 
-      const res = await fetch("https://backend-personal-digital-assistant.onrender.com/ask", {
+      const res = await fetch("http://localhost:3000/ask", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
